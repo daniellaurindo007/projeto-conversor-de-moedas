@@ -42,7 +42,7 @@ function convertValues() {
 
      if (currencySelet.value == "bitcoin") {
         
-          valueConverted.innerHTML =  new Intl.NumberFormat ("en-US",{style: "currency",
+          valueConverted.innerHTML =  new Intl.NumberFormat("en-US",{style: "currency",
         currency: "USD"}).format(inputCurrencyValue/bitcoinToday)
 
         }
@@ -82,3 +82,20 @@ function convertValues() {
 currencySelet.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click",convertValues )
     
+
+const particles = document.querySelector('.particles');
+
+for(let i = 0; i < 40; i++) {
+
+    const span = document.createElement('span');
+
+    span.style.left = Math.random() * 100 + 'vw';
+
+    span.style.animationDuration =
+        (Math.random() * 10 + 10) + 's';
+
+    span.style.opacity = Math.random();
+
+    particles.appendChild(span);
+
+}
